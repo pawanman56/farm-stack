@@ -29,7 +29,7 @@ def read_root():
 
 @app.get("/api/todo")
 async def get_todo():
-    response = await fetch_all_todos
+    response = await fetch_all_todos()
     return response
 
 @app.get("/api/todo{title}", response_model=Todo)
